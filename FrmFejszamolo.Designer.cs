@@ -1,6 +1,6 @@
 ﻿namespace WFA241010DM
 {
-    partial class FrmOsszeado
+    partial class FrmFejszamolo
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,10 +38,10 @@
             tbF4 = new TextBox();
             lblF5 = new Label();
             tbF5 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button4 = new Button();
-            label1 = new Label();
+            btnEllenorzes = new Button();
+            btnUjFeladatok = new Button();
+            btnBezaras = new Button();
+            lblMsg = new Label();
             SuspendLayout();
             // 
             // lblF1
@@ -56,6 +56,7 @@
             // 
             // tbF1
             // 
+            tbF1.Enabled = false;
             tbF1.Font = new Font("Segoe UI", 12F);
             tbF1.Location = new Point(138, 14);
             tbF1.Margin = new Padding(3, 3, 3, 10);
@@ -72,10 +73,11 @@
             lblF2.Name = "lblF2";
             lblF2.Size = new Size(120, 29);
             lblF2.TabIndex = 0;
-            lblF2.Text = "xx + yy =";
+            lblF2.Text = "xx - yy =";
             // 
             // tbF2
             // 
+            tbF2.Enabled = false;
             tbF2.Font = new Font("Segoe UI", 12F);
             tbF2.Location = new Point(138, 56);
             tbF2.Margin = new Padding(3, 3, 3, 10);
@@ -96,6 +98,7 @@
             // 
             // tbF3
             // 
+            tbF3.Enabled = false;
             tbF3.Font = new Font("Segoe UI", 12F);
             tbF3.Location = new Point(138, 98);
             tbF3.Margin = new Padding(3, 3, 3, 10);
@@ -112,10 +115,11 @@
             lblF4.Name = "lblF4";
             lblF4.Size = new Size(120, 29);
             lblF4.TabIndex = 0;
-            lblF4.Text = "xx + yy =";
+            lblF4.Text = "xx - yy =";
             // 
             // tbF4
             // 
+            tbF4.Enabled = false;
             tbF4.Font = new Font("Segoe UI", 12F);
             tbF4.Location = new Point(138, 140);
             tbF4.Margin = new Padding(3, 3, 3, 10);
@@ -136,6 +140,7 @@
             // 
             // tbF5
             // 
+            tbF5.Enabled = false;
             tbF5.Font = new Font("Segoe UI", 12F);
             tbF5.Location = new Point(138, 182);
             tbF5.Margin = new Padding(3, 3, 3, 10);
@@ -144,59 +149,61 @@
             tbF5.TabIndex = 1;
             tbF5.TextAlign = HorizontalAlignment.Right;
             // 
-            // button1
+            // btnEllenorzes
             // 
-            button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            button1.Location = new Point(202, 56);
-            button1.Margin = new Padding(10, 3, 10, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(133, 29);
-            button1.TabIndex = 4;
-            button1.Text = "ellenőrzés";
-            button1.UseVisualStyleBackColor = true;
+            btnEllenorzes.Enabled = false;
+            btnEllenorzes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnEllenorzes.Location = new Point(202, 56);
+            btnEllenorzes.Margin = new Padding(10, 3, 10, 3);
+            btnEllenorzes.Name = "btnEllenorzes";
+            btnEllenorzes.Size = new Size(133, 29);
+            btnEllenorzes.TabIndex = 4;
+            btnEllenorzes.Text = "ellenőrzés";
+            btnEllenorzes.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnUjFeladatok
             // 
-            button2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            button2.Location = new Point(202, 13);
-            button2.Margin = new Padding(10, 3, 10, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(133, 29);
-            button2.TabIndex = 4;
-            button2.Text = "új feladatok";
-            button2.UseVisualStyleBackColor = true;
+            btnUjFeladatok.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnUjFeladatok.Location = new Point(202, 13);
+            btnUjFeladatok.Margin = new Padding(10, 3, 10, 3);
+            btnUjFeladatok.Name = "btnUjFeladatok";
+            btnUjFeladatok.Size = new Size(133, 29);
+            btnUjFeladatok.TabIndex = 4;
+            btnUjFeladatok.Text = "új feladatok";
+            btnUjFeladatok.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnBezaras
             // 
-            button4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            button4.Location = new Point(202, 182);
-            button4.Margin = new Padding(10, 3, 10, 3);
-            button4.Name = "button4";
-            button4.Size = new Size(133, 29);
-            button4.TabIndex = 4;
-            button4.Text = "bezárás";
-            button4.UseVisualStyleBackColor = true;
+            btnBezaras.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnBezaras.Location = new Point(202, 182);
+            btnBezaras.Margin = new Padding(10, 3, 10, 3);
+            btnBezaras.Name = "btnBezaras";
+            btnBezaras.Size = new Size(133, 29);
+            btnBezaras.TabIndex = 4;
+            btnBezaras.Text = "bezárás";
+            btnBezaras.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblMsg
             // 
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Segoe UI", 8F);
-            label1.Location = new Point(202, 98);
-            label1.Name = "label1";
-            label1.Size = new Size(133, 71);
-            label1.TabIndex = 5;
-            label1.Text = "Kezdéshez nyomd meg az 'új feladatok' feliratú gombot!";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            lblMsg.BackColor = Color.White;
+            lblMsg.Font = new Font("Segoe UI", 8F);
+            lblMsg.Location = new Point(202, 98);
+            lblMsg.Name = "lblMsg";
+            lblMsg.Size = new Size(133, 71);
+            lblMsg.TabIndex = 5;
+            lblMsg.Text = "Kezdéshez nyomd meg az 'új feladatok' feliratú gombot!";
+            lblMsg.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // FrmOsszeado
+            // FrmFejszamolo
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(354, 223);
-            Controls.Add(label1);
-            Controls.Add(button4);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ControlBox = false;
+            Controls.Add(lblMsg);
+            Controls.Add(btnBezaras);
+            Controls.Add(btnUjFeladatok);
+            Controls.Add(btnEllenorzes);
             Controls.Add(tbF5);
             Controls.Add(lblF5);
             Controls.Add(tbF4);
@@ -208,9 +215,12 @@
             Controls.Add(tbF1);
             Controls.Add(lblF1);
             Font = new Font("Segoe UI", 14F);
-            Margin = new Padding(5, 5, 5, 5);
-            Name = "FrmOsszeado";
-            Text = "Összeadó";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FrmFejszamolo";
+            Text = "Fejszámolás gyakorló";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -227,9 +237,9 @@
         private TextBox tbF4;
         private Label lblF5;
         private TextBox tbF5;
-        private Button button1;
-        private Button button2;
-        private Button button4;
-        private Label label1;
+        private Button btnEllenorzes;
+        private Button btnUjFeladatok;
+        private Button btnBezaras;
+        private Label lblMsg;
     }
 }
